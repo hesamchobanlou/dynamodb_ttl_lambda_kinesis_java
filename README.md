@@ -29,7 +29,12 @@ aws lambda create-event-source-mapping \
 
 Change ```<dynamodb_stream_ARN>``` with the generated DynamoDB table stream ARN.
 
-If needed, attach ```AWSLambdaInvocation-DynamoDB``` to the lambda function generated role. 
+If you are adding the filter through the AWS Trigger Configuration page, use below:
+```json
+{"userIdentity":{"type":["Service"],"principalId":["dynamodb.amazonaws.com"]}}
+```
+
+If you receive an error the function is missing Permissions, attach ```AWSLambdaInvocation-DynamoDB``` policy to the lambda generated role.
 
 ### Build Java Project
 ```mvn package```
