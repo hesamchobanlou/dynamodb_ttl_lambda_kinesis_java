@@ -1,4 +1,5 @@
 # DynamoDB TTL Stream to S3 Bucket
+The purpose of this project is to test DynamoDB TTL delete events and the storage of deleted records into an S3 bucket for audit/tracking purposes.
 
 <img src="images/OverviewImage.png" />
 
